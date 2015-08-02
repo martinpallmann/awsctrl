@@ -1,2 +1,8 @@
 AWS Ctrl
 ========
+
+Install with npm link
+
+It uses IO.js, so you have to have that installed.
+
+For linking you need npm.
