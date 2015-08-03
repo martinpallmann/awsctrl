@@ -244,7 +244,7 @@ exports.run = () => {
     autoPadding: true,
     smartCSR: true
   })
-  screen.key(['escape', 'q', 'C-c'], function(ch, key) {
+  screen.key(['C-c'], function(ch, key) {
     return process.exit(0);
   })
   screen.key('tab', (ch, key) => {
