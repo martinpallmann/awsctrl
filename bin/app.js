@@ -70,6 +70,11 @@ const tableData = (table, headers) => {
       headers: headers, 
       data: values() 
     })
+    data.sort((a, b) => { 
+      if (a.key > b.key) return 1 
+      if (a.key < b.key) return -1 
+      return 0
+    })
   }
 
   const get = (idx) => {
@@ -88,7 +93,7 @@ const listServices = (blessed, screen, contrib, ecs, grid, row, col, rowSpan, co
   const table = grid.set(row, col, rowSpan, colSpan, contrib.table, { 
     keys: true, 
     fg: 'white',  
-    label: 'Services',
+    label: 'ECS Services',
     interactive: false,
     columnSpacing: 2, 
     columnWidth: [20, 10, 10, 10]
